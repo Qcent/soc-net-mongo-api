@@ -1,0 +1,24 @@
+{
+  "name": "soc-net-mongo-api",
+  "version": "1.0.0",
+  "description": "Social Network API fetching from a MongoDB backend, powered by Express.js",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Qcent/soc-net-mongo-api.git"
+  },
+  "author": "",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Qcent/soc-net-mongo-api/issues"
+  },
+  "homepage": "https://github.com/Qcent/soc-net-mongo-api#readme",
+  "dependencies": {
+    "express": "^4.17.1",
+    "mongoose": "^6.1.2"
+  }
+}
