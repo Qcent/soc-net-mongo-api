@@ -60,8 +60,6 @@ const UserController = {
 
     // delete User
     deleteUser({ params }, res) {
-
-
         User.findOneAndDelete({ _id: params.userId })
             .then(dbUserData => {
                 if (!dbUserData) {
@@ -69,11 +67,23 @@ const UserController = {
                     return;
                 }
 
-                /* ADD LOGIC TO REMOVE ALL USER THOUGHTS FROM DATABASE SOMEWHERE  */
+                /* ADD LOGIC TO REMOVE ALL USER THOUGHTS FROM DATABASE  */
                 Thought.deleteMany({ username: dbUserData.username })
                     .then(dbThoughtData => {
                         console.log(dbThoughtData);
                     })
+                    //this error code does not get thrown if no thoughts exist
+                    // .catch(err => res.status(207).json(err));
+                    /* */
+
+
+                /* ADD LOGIC TO REMOVE ALL FRIEND REFERENCES FROM OTHER USERS IN DATABASE  */
+                User.updateMany({ "friends": dbUserData._id }, { $pull: { friends: dbUserData._id } }, { new: true, runValidators: true })
+                    .then(dbUpdateData => {
+                        console.log(dbUpdateData);
+                    })
+                    //this error code does not get thrown if no friends exist
+                    // .catch(err => res.status(207).json(err));
                     /* */
 
                 res.json(dbUserData);

@@ -9,13 +9,13 @@ const {
     removeFriend
 } = require('../../controllers/user-controller');
 
-// /api/users/>
+// /api/user/>
 router.route('/').get(getAllUser).post(createUser);
 
-// /api/users/>/<userId>
+// /api/user/>/<userId>
 router.route('/:userId').get(getUserById).put(updateUser).delete(deleteUser);
 
-// /api/users/:userId/friends/:friendId
+// /api/user/:userId/friends/:friendId
 router.route('/:userId/friends/:friendId').post(addFriend).delete(removeFriend);
 
 
