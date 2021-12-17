@@ -1,7 +1,7 @@
 
 # Social Network API Backend
  
- ![MIT](https://img.shields.io/badge/License-MIT-orange)  ![Node.js](https://img.shields.io/badge/Tech-Node.js-lightblue)  ![Express.js](https://img.shields.io/badge/Tech-Express.js-lightblue)  ![MondoBD](https://img.shields.io/badge/Tech-MondoBD-lightblue)  ![Mongoose](https://img.shields.io/badge/Tech-Mongoose-lightblue) 
+ ![MIT](https://img.shields.io/badge/License-MIT-orange)  ![Node.js](https://img.shields.io/badge/Tech-Node.js-lightblue)  ![Express.js](https://img.shields.io/badge/Tech-Express.js-lightblue)  ![MongoBD](https://img.shields.io/badge/Tech-MongoBD-lightblue)  ![Mongoose](https://img.shields.io/badge/Tech-Mongoose-lightblue) 
 
 ## Description
 A Social Network API fetching from a MongoDB backend, powered by Express.js. Create users and friend lists, share thoughts and react to others thoughts.  
