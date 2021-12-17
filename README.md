@@ -18,7 +18,14 @@ A Social Network API fetching from a MongoDB backend, powered by Express.js. Cre
 
 ## Installation
 
-This project requires that Node.js be installed on the target machine and that the user has write access to a MySQL server.
+This project requires that Node.js be installed on the target machine and that the user has write access to a MongoDB server.
+
+1. Copy the repository files and then run npm install to install all required dependencies.
+2.  On line 13 of the `server.js` file edit the uri string or set the `MONGODB_URI` environment variable as required to connect to your MongoDB server.
+```
+13|  mongoose.connect(process.env.MONGODB_URI || 'mongodb://localhost:27017/soc_netDB', {
+```
+3. That's it your ready to run the server!
 
 ## Usage
 
