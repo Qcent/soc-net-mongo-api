@@ -6,6 +6,10 @@
 ## Description
 A Social Network API fetching from a MongoDB backend, powered by Express.js. Create users and friend lists, share thoughts and react to others thoughts.  
 
+Watch the Demo Video
+
+[![Employee CMS Demo Video](./assets/images/app-demo-screenshot.png)](https://drive.google.com/file/d/1W6EyLK8o4KjzGOe7ldALq9DSOLf1Ho9X/view?usp=sharing "Social Network MongoDB Demo Video")
+
 ## Table of Contents
 
 * [Description](#description)
@@ -25,7 +29,7 @@ This project requires that Node.js be installed on the target machine and that t
 ```
 13|  mongoose.connect(process.env.MONGODB_URI || 'mongodb://localhost:27017/soc_netDB', {
 ```
-3. That's it your ready to run the server!
+3. That's it you're ready to run the server!
 
 ## Usage
 
