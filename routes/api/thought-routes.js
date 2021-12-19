@@ -10,7 +10,14 @@ const {
 } = require('../../controllers/thought-controller');
 
 // /api/thoughts?user=<userId>&thot=<thoughtId>
-router.route('/').get(getAllThoughts).post(addThought).delete(removeThought).get(getThoughtById).put(updateThought);
+router.route('/').post(addThought).delete(removeThought).get(getThoughtById).put(updateThought);
+
+// /api/thoughts/all
+router.route('/all').get(getAllThoughts);
+
+// /api/thoughts/reaction?thot=<thoughtId>&react=<reactionId>
+router.route('/reaction').post(addReaction).delete(removeReaction);
+
 
 // /api/thoughts/<thoughtId>
 //router.route('/:thoughtId').get(getThoughtById).put(updateThought);
@@ -19,10 +26,7 @@ router.route('/').get(getAllThoughts).post(addThought).delete(removeThought).get
 //router.route('/:userId/:thoughtId').delete(removeThought);
 // replace with /api/thoughts?user=<userId>&thot=<thoughtId>
 
-// /api/thoughts/reaction?thot=<thoughtId>&react=<reactionId>
-router.route('/reaction').post(addReaction).delete(removeReaction);
-
-// remove a Reaction /* SEE ABOVE */
+// remove a Reaction /* NOW handled by above /reaction route */
 // /api/thoughts/reaction/<thoughtId>/<reactionId>
 //router.route('/reaction/:thoughtId/:reactionId');
 
