@@ -80,8 +80,6 @@ const UserController = {
                     console.log(dbThoughtData);
                     return dbUserData;
                 })
-                //this error code does not get thrown if no thoughts exist
-                .catch(err => res.status(207).json(err))
                 /* */
             ).then(dbUserData => /* ADD LOGIC TO REMOVE ALL FRIEND REFERENCES FROM OTHER USERS IN DATABASE  */
                 User.updateMany({ "friends": dbUserData._id }, { $pull: { friends: dbUserData._id } }, { new: true })
@@ -91,8 +89,6 @@ const UserController = {
 
                     res.json(dbUserData);
                 })
-                //this error code does not get thrown if no friending exist
-                // .catch(err => res.status(207).json(err));
                 /* */
             )
             .catch(err => res.status(400).json(err));
