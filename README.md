@@ -8,7 +8,7 @@ A Social Network API fetching from a MongoDB backend, powered by Express.js. Cre
 
 Watch the Demo Video
 
-[![Employee CMS Demo Video](./assets/images/app-demo-screenshot.png)](https://drive.google.com/file/d/1W6EyLK8o4KjzGOe7ldALq9DSOLf1Ho9X/view?usp=sharing "Social Network MongoDB Demo Video")
+[![Employee CMS Demo Video](./assets/images/app-demo-screenshot.png)](https://drive.google.com/file/d/1BmAeNPn_54xpdFk12fbttSPj5jq6OTfK/view?usp=sharing "Social Network MongoDB Demo Video")
 
 ## Table of Contents
 
